@@ -4,6 +4,7 @@ import { Usuario } from "models/Usuario";
 import "config/dotenv";
 import * as bcrypt from "bcrypt";
 import * as jwt from "jsonwebtoken";
+import { gerarEntrada } from "./monitamento-tela";
 
 const usuarioRepositorio = AppDataSource.getRepository(Usuario);
 export const loginUser = async (req: Request, res: Response) => {

@@ -36,10 +36,11 @@ export async function dadosIniciais() {
       .insert()
       .into(Tela)
       .values([
-        { nome: "Tela 1" },
-        { nome: "Tela 2" },
-        { nome: "Tela 3" },
-        { nome: "Tela 4" },
+        { nome: "Tela de Home" },
+        { nome: "Tela de Produtos" },
+        { nome: "Tela de Produto" },
+        { nome: "Tela de Carrinho" },
+        { nome: "Tela de Pagamento" },
       ])
       .execute();
   } catch (error) {}
