@@ -11,7 +11,7 @@ const app = express();
 try {
   AppDataSource.initialize().then(async () => {
     console.log("Banco criado com sucesso");
-    /*     dadosIniciais(); */
+        dadosIniciais();
   });
 } catch (error) {
   console.log(`Connection error ${error}`);

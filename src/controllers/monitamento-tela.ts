@@ -64,7 +64,12 @@ export const pegarRelatorioUmUsuario = async (req: Request, res: Response) => {
 
 export const PegarRelatorios = async (req: Request, res: Response) => {
   try {
-    const find = await monitoramenteRepository.find({});
+    const find = await monitoramenteRepository.find({
+      relations: {
+        tela: true,
+        usuario: true
+      }
+    });
     res.json(find);
   } catch (error) {
     console.log(error);

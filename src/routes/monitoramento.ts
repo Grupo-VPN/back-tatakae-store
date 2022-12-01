@@ -9,9 +9,9 @@ import { auth } from "middlewares/auth";
 const router = express.Router();
 
 router.post("/monitorar", gerarEntrada);
+router.get("/monitorar", PegarRelatorios);
 router.use(auth);
 router.put("/monitorar/:idMonitoramento", gerarSaida);
-router.get("/monitorar", PegarRelatorios);
 router.get("/monitorar/:idUsuario", pegarRelatorioUmUsuario);
 
 export default router;
